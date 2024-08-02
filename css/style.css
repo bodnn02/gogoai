@@ -6,7 +6,9 @@ body {
 
     background: linear-gradient(to bottom, #0d081b, #3c016d, #030104, #000, #030104, #0d081b, #3c016d);
 }
-
+b {
+    font-weight: bold!important;
+}
 
 /* Header *Start* */
 
@@ -328,6 +330,21 @@ section:not(:last-child) {
     margin-top: 12px;
 }
 .tags-wrapper {
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+.tags-wrapper > span:first-child {
+    margin-right: 14px;
+}
+.tags-wrapper span {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
 }
 .primary-btn {
     display: block;
