@@ -33,8 +33,12 @@ body {
     line-height: 22px;
     color: #fff;
     text-decoration: none;
-}
 
+    transition: linear .2s;
+}
+.header-nav__item:hover {
+    opacity: .6;
+}
 .header-nav__item:not(:last-child) {
     margin-right: 16px;
 }
@@ -129,12 +133,19 @@ section:not(:last-child) {
     background-color: #12004e;
     border-radius: 50%;
     border: none;
+
+    transition: linear .2s;
+    cursor: pointer;
 }
 
 .search__btn>img {
     width: 65%;
 
     filter: invert(1);
+}
+
+.search__btn:hover {
+    opacity: .8;
 }
 
 /* Search section *Stop* */
@@ -406,8 +417,12 @@ section:not(:last-child) {
     line-height: 22px;
     color: #fff;
     text-decoration: none;
-}
 
+    transition: linear .2s;
+}
+.footer-nav__item:hover {
+    opacity: .6;
+}
 .footer-nav__item:not(:last-child) {
     margin-right: 16px;
 }
