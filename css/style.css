@@ -109,7 +109,7 @@ section:not(:last-child) {
 
     width: 100%;
     font-family: 'Montserrat';
-    font-size: 28px;
+    font-size: 22px;
     font-style: normal;
     text-align: left;
     line-height: 32px;
@@ -227,23 +227,56 @@ section:not(:last-child) {
 /* Catalogue section *Start* */
 
 .catalogue-section > .container {
-    margin: 0 160px;
+    margin: 0 160px 0 0;
+
+    display: grid;
+    gap: 80px;
+    grid-template-columns: auto 1fr;
 }
 .catalogue-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 24px;
 }
 .catalogue-list__item {
     padding: 24px 28px;
+    width: calc(100% - 56px);
+    height: fit-content;
 
     border-radius: 12px;
     border: 1px solid #fff;
     background-color: #000;
 }
-.catalogue-list__preview {
+.catalogue-list__wrapper {
     margin-bottom: 16px;
 
-    max-width: 400px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+}
+
+.catalogue-icons {
+    height: fit-content;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.catalogue-icons__item {
+    width: 32px;
+    height: 32px;
+}
+
+.catalogue-icons__item > img {
+    width: 100%;
+    height: 100%;
+}
+
+.catalogue-list__preview {
+    margin: 0 auto;
+
+    max-width: 250px;
     height: 250px;
 
     border-radius: 12px;
@@ -340,7 +373,6 @@ section:not(:last-child) {
     margin-right: 2px;
     width: 28px;
 
-    filter: invert(1);
     transform: rotate(180deg);
 }
 .like-btn span {
@@ -362,7 +394,6 @@ section:not(:last-child) {
     margin-right: 2px;
     width: 28px;
 
-    filter: invert(1);
     transform: rotate(180deg);
 }
 .dislike-btn span {
@@ -380,9 +411,32 @@ section:not(:last-child) {
 .like-btn:hover, .dislike-btn:hover {
     opacity: .6;
 }
-.catalogue-section > .container > .primary-btn {
-    margin: 60px auto;
+
+.catalogue-section .paggination-list {
+    grid-column: 2 span;
 }
+
+.paggination-list {
+    margin: 60px auto;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.paggination-list__item {
+    margin-bottom: 6px;
+
+    min-width: unset;
+    width: fit-content;
+    padding: 8px 16px;
+
+    border-radius: 4px;
+}
+.paggination-list__item:not(:last-child) {
+    margin-right: 8px;
+}
+
 /* Catalogue section *Stop* */
 
 
@@ -428,3 +482,119 @@ section:not(:last-child) {
 }
 
 /* Footer *Stop* */
+
+/* Article section *Start* */
+
+.article-section {
+    padding: 100px 0;
+}
+
+.article-section > .container {
+    margin: 0 160px;
+}
+.article-section .text-h1 {
+    text-align: left;
+}
+.text-p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+    color: #a8a8a8;
+    text-decoration: none;
+
+    transition: linear .2s;
+}
+.text-h1 + .text-p {
+    margin-top: 24px;
+}
+.article-section .text-p {
+    max-width: 1000px;
+}
+
+.article-header + .article-content {
+    margin-top: 24px;
+}
+
+.article-content > .text-p:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+/* Article section *Stop* */
+
+/* Banner section *Start* */
+
+.banners-section > .container {
+    margin: 0 160px;
+}
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+}
+.banners-section > .container > .grid-wrapper {
+    width: fit-content;
+    margin: 0 auto;
+}
+.banner-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.banner-list__item {
+    width: 468px;
+    height: 60px;
+
+    overflow: hidden;
+
+    transition: linear .2s;
+}
+.banner-list__item:hover {
+    opacity: .6;
+}
+.banner-list__item > a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banner-list__item img {
+    width: 100%;
+}
+/* Banner section *Stop* */
+
+/* Banners Aside *Start* */
+
+.banners-aside > .container {
+    padding: 20px;
+}
+.banners-aside .banners-list {
+    display: flex;
+    flex-direction: column;
+}
+.banners-list__item {
+    width: 285px;
+    height: 200px;
+
+    overflow: hidden;
+
+    transition: linear .2s;
+}
+.banners-list__item:hover {
+    opacity: .6;
+}
+.banners-list__item > a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.banners-list__item:not(:last-child) {
+    margin-bottom: 56px;
+}
+
+/* Banners Aside *Stop* */
