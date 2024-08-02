@@ -4,7 +4,7 @@ body {
     display: grid;
     grid-template-rows: auto 1fr auto;
 
-    background: linear-gradient(to bottom, #0d081b, #3c016d, #030104, #000);
+    background: linear-gradient(to bottom, #0d081b, #3c016d, #030104, #000, #030104, #0d081b, #3c016d);
 }
 
 
@@ -41,7 +41,10 @@ body {
 
 /* Header *Stop* */
 
-.main-section > .container {
+
+/* Main section *Start* */
+
+.main-section>.container {
     margin: 0 140px;
 }
 
@@ -54,9 +57,11 @@ body {
     line-height: 64px;
     color: #fff;
 }
+
 .main-section .text-h1 {
     margin-top: 60px;
 }
+
 .text-h2 {
     font-family: 'Montserrat';
     font-size: 28px;
@@ -65,9 +70,24 @@ body {
     line-height: 22px;
     color: #fff;
 }
-.text-h1 + .text-h2 {
+
+.text-h1+.text-h2 {
     margin-top: 48px;
 }
+
+/* Main section *Stop* */
+
+
+section:not(:last-child) {
+    margin-bottom: 60px;
+}
+
+/* Search section *Start* */
+
+.search-section > .container {
+    margin: 0 160px;
+}
+
 .search {
     background-color: #fff;
     border-radius: 48px;
@@ -75,9 +95,11 @@ body {
     display: flex;
     align-items: center;
 }
-.text-h2 + .search {
+
+.text-h2+.search {
     margin-top: 48px;
 }
+
 .search__input {
     padding: 10px 32px;
 
@@ -108,8 +130,286 @@ body {
     border-radius: 50%;
     border: none;
 }
-.search__btn > img {
+
+.search__btn>img {
     width: 65%;
 
     filter: invert(1);
 }
+
+/* Search section *Stop* */
+
+
+/* Categories section *Start* */
+
+.categories-section > .container {
+    margin: 0 320px;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.category-list__item {
+    padding: 10px 48px;
+    margin-bottom: 12px;
+
+    border: 1px solid #fff;
+    border-radius: 48px;
+
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    line-height: 18px;
+    color: #fff;
+}
+
+.category-list__item:not(:last-child) {
+    margin-right: 12px;
+}
+
+/* Categories section *Stop* */
+
+
+/* Pros section *Start* */
+
+.pros-section > .container {
+    margin: 0 220px;
+}
+.pros-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+.pros-list__item {
+    padding: 40px 20px;
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(to bottom, #110634, #340758);
+    border-radius: 8px;
+}
+.pros-list__icon {
+    margin-right: 20px;
+
+    filter: invert(1);
+}
+.pros-list__text {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 600;
+    line-height: 22px;
+    color: #fff;
+}
+
+
+/* Pros section *Stop* */
+
+
+/* Catalogue section *Start* */
+
+.catalogue-section > .container {
+    margin: 0 160px;
+}
+.catalogue-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.catalogue-list__item {
+    padding: 24px 28px;
+
+    border-radius: 12px;
+    border: 1px solid #fff;
+    background-color: #000;
+}
+.catalogue-list__preview {
+    margin-bottom: 16px;
+
+    max-width: 400px;
+    height: 250px;
+
+    border-radius: 12px;
+    overflow: hidden;
+}
+.catalogue-list__preview > img {
+    height: 100%;
+}
+.catalogue-list__views-count {
+    padding-left: 32px;
+    width: fit-content;
+    margin-left: auto;
+
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 400;
+    line-height: 18px;
+    color: #fff;
+
+    background-image: url(../img/icons8-eye-48.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 24px 24px;
+}
+.catalogue-list__views-count + .catalogue-list__h3 {
+    margin-top: 32px;
+}
+.catalogue-list__h3 {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 600;
+    line-height: 18px;
+    color: #fff;
+}
+.catalogue-list__p {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-style: normal;
+    text-align: left;
+    font-weight: 400;
+    line-height: 16px;
+    color: #a8a8a8;
+}
+.catalogue-list__h3  + .catalogue-list__p {
+    margin-top: 12px;
+}
+.tags-wrapper {
+}
+.primary-btn {
+    display: block;
+    min-width: 120px;
+    width: fit-content;
+    padding: 10px 20px;
+
+    background-color: #3a016e;
+    border-radius: 24px;
+
+    font-family: 'Montserrat';
+    font-size: 16px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 18px;
+    color: #fff;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: linear .2s;
+}
+.primary-btn:hover {
+    background-color: #2c0253;
+}
+.rating-wrapper {
+    margin-left: auto;
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+}
+.rating-wrapper > :not(:last-child) {
+    margin-right: 12px;
+}
+.like-btn {
+    display: flex;
+    align-items: flex-end;
+
+    cursor: pointer;
+}
+.like-btn > img {
+    margin-right: 2px;
+    width: 28px;
+
+    filter: invert(1);
+    transform: rotate(180deg);
+}
+.like-btn span {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 16px;
+    color: #fff;
+}
+.dislike-btn {
+    display: flex;
+    align-items: flex-end;
+
+    cursor: pointer;
+}
+.dislike-btn > img {
+    margin-right: 2px;
+    width: 28px;
+
+    filter: invert(1);
+    transform: rotate(180deg);
+}
+.dislike-btn span {
+    font-family: 'Montserrat';
+    font-size: 14px;
+    font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    line-height: 16px;
+    color: #fff;
+}
+.like-btn, .dislike-btn {
+    transition: linear .2s;
+}
+.like-btn:hover, .dislike-btn:hover {
+    opacity: .6;
+}
+.catalogue-section > .container > .primary-btn {
+    margin: 60px auto;
+}
+/* Catalogue section *Stop* */
+
+
+/* Footer *Start* */
+
+.footer {
+    padding: 60px 0;
+}
+.footer > .container {
+    margin: 0 160px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+}
+
+.footer-nav {
+    margin-left: auto;
+    width: fit-content;
+}
+
+.footer-nav:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.footer-nav__item {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    line-height: 22px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-nav__item:not(:last-child) {
+    margin-right: 16px;
+}
+
+/* Footer *Stop* */
